@@ -1,0 +1,76 @@
+    /* ================================= */
+    /*    Cards flex (soleil/mes voyages/...)      */
+    /* ================================= */
+
+    .soleil__card__links{
+        display: flex;
+        width: fit-content;
+        flex-flow: column nowrap;
+    }
+    .soleil__card__links > a,
+    .soleil__card__links > span{
+        margin: 6px 0;
+        width: fit-content;
+    }
+    .soleil__card__links.soleil__card__links--2 {
+        margin-top: auto;
+    }
+    .soleil__card__meteo {
+        position: absolute;
+        background: var(--mimosa);
+        border-radius: 50%;
+        width: 35%;
+        height: 0;
+        left: 50%;
+        bottom: -45px;
+        z-index: 2;
+        transform: translateX(-50%);
+        padding-bottom: 35%;
+    }
+    .soleil__card__meteo > div {
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        width: 100%;
+    }
+
+    .partir__card__photo > img {
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: var(--b-radius);
+        border-top-right-radius: var(--b-radius);
+    }
+
+    .partir__card__photo__container {
+        position: relative;
+        margin: 0;
+        z-index: 1;
+    }
+
+    .partir__card{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        flex-basis: 343px;
+        border-radius: var(--b-radius);
+        background: #FFFFFF;
+        box-shadow: var(--ombre-div);
+    }
+
+    .partir__cards__group{
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-flow: row wrap;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .partir__card__info{
+        padding: 50px 30px;
+    }
+
+    .partir__card__top {
+        position: relative;
+    }

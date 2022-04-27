@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Kit -- Partir.com</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="design_kit.css">
+    <script src="like.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet" as="font" crossorigin="anonymous">
+</head>
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+
+        $(window).on('popstate', function() {
+            location.reload(true);
+        });
+
+        function load(page){
+            // $('<script />', { type : 'text/javascript', src : "hover.js"}).appendTo('head');
+            $(".dkit__main, #dkit__section").hide(600, ()=>{
+                $(".dkit__heading, .dkit__main").remove();
+                $("#dkit__section").load(`components/${page}.html`, ()=>{$("#dkit__section").show(600)});
+            })
+        }
+
+        if (window.location.hash != ""){
+            load(window.location.hash.slice(1));
+        }
+
+        $(".dkit__menu-btn").click(function(){
+            let page = $(this).attr("id");
+            load(page);
+        })
+    })
+</script>
+<body>
+    <div class="dkit__cont">
+        <div id="dkit__section" class="dkit__section">
+            
+        </div>
+        <div class="dkit__heading">
+            <h1 class="dkit__h1">Design Kit Partir.com</h1>
+        </div>
+        <div class="dkit__main">
+            <a id="page-de-test" style="background: #ffc12763;" class="dkit__menu-btn">
+                <span><i class="u__star u__star--sm" style="filter: grayscale(1);mix-blend-mode: multiply;"></i> Page de test</span>
+                <span>></span>
+            </a>
+            <a href="#mise-en-page" id="mise-en-page" class="dkit__menu-btn">
+                <span>Mise en page</span>
+                <span>></span>
+            </a>
+            <a href="#blocs-div" id="blocs-div" class="dkit__menu-btn">
+                <span>Blocs DIV</span>
+                <span>></span>
+            </a>
+            <a href="#blocs-guide-perso" id="blocs-guide-perso" class="dkit__menu-btn">
+                <span>Blocs Guide Perso.</span>
+                <span>></span>
+            </a>
+            <a class="dkit__menu-btn">
+                <span>Menus, Forms, Dropdown ...</span>
+                <span>></span>
+            </a>
+            <a href="#couleurs" id="couleurs" class="dkit__menu-btn">
+                <span>Couleurs</span>
+                <span>></span>
+            </a>
+            <a href="#typo" id="typo" class="dkit__menu-btn">
+                <span>Typo</span>
+                <span>></span>
+            </a>
+            <a href="#marges" id="marges" class="dkit__menu-btn">
+                <span>Marges</span>
+                <span>></span>
+            </a>
+            <a href="#liens-et-boutons" id="liens-et-boutons" class="dkit__menu-btn">
+                <span>Liens et boutons</span>
+                <span>></span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

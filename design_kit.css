@@ -1,0 +1,206 @@
+/* =================================== */
+/* ======== Pages D-KIT seulement ======== */
+/* =================================== */
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-image: linear-gradient(0deg, #ffffff 25%, #ebebeb 25%, #ebebeb 50%, #ffffff 50%, #ffffff 75%, #ebebeb 75%, #ebebeb 100%);
+    background-size: 4.00px 4.00px;
+    position: relative;
+    height: 100vh;
+    margin: 0;
+}
+
+b{
+    font-weight: 600;
+}
+
+p{
+    margin: 0;
+}
+
+.dkit__cont__column{
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 20px;
+    border: 1px dashed #7B61FF;
+    border-radius: 5px;
+}
+
+span.dkit__typo__title {
+    display: block;
+    border-bottom: solid 2px #5b5959;
+    width: 100%;
+    margin: 14px 0px;
+    font-size: 1.6em;
+}
+
+
+.dkit__col__example{
+    background: gray;
+    color: white;
+    height: 410px;
+    width: 100%;
+}
+
+.dkit__color__group{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 72px;
+}
+
+.dkit__color > div{
+    width: 100px;
+    height: 110px;
+    border-radius: 1em;
+    background-color: white;
+} 
+
+.dkit__color > .dkit__color__text{
+    background-color: initial;
+} 
+
+.dkit__color > .u__color__noir{
+    background-color: var(--noir);
+} 
+.dkit__color > .u__color__mimosa{
+    background-color: var(--mimosa);
+} 
+.dkit__color > .u__color__background{
+    background-color: var(--background);
+} 
+.dkit__color > .u__color__groseille{
+    background-color: var(--groseille);
+} 
+.dkit__color > .u__color__naples{
+    background-color: var(--naples);
+} 
+.dkit__color > .u__color__gris{
+    background-color: var(--gris);
+} 
+.dkit__color > .u__color__glacier{
+    background-color: var(--glacier);;
+} 
+.dkit__color > .u__color__accents{
+    background-color: var(--accents);
+} 
+
+.dkit__radius-preview > .u__b-radius{
+    background-color: gray;
+    width: 120px;
+    height: 80px;
+    color: white;
+}
+
+.dkit__modal-src__cont{
+    width: 100vw;
+    height: 100vh;
+    background: #000000a3;
+    margin: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.dkit__modal-src{
+    width: 70%;
+    padding: 50px;
+    background: #f4f4f4;
+    border-radius: 1em;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 2px 2px 10px #00000066;
+}
+
+.dkit__modal-src__html > textarea,
+.dkit__modal-src__css > textarea {
+    width: 100%;
+    height: 250px;
+    background: #d5d5d5a6;
+    color: #008b8e;
+    border-radius: 1em;
+    border: solid 1px #c1c1c1;
+}
+
+.dkit__cont{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dkit__content{
+    margin: 0 auto;
+}
+
+.dkit__color__text > p{
+    white-space: pre-line;
+}
+
+.dkit__section{
+    display: none;
+    border-radius: 1em;
+    position: relative;
+    padding: 6px 32px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.dkit__h1{
+    font-weight: 300;
+    color: gray;
+}
+
+.dkit__h2, .dkit__h3, .dkit__h4{
+    font-weight: 300;
+    color: gray;
+    width: 100%;
+    border-bottom: solid 1px #dadada;
+}
+
+.dkit__menu-btn {
+    cursor: pointer;
+    padding: 15px;
+    background-color: #f2f2f2de;
+    border: solid 1px #c5c5c5;
+    box-shadow: 4px 6px 7px #a09b9b33;
+    border-right: solid 3px #cfcfcfdb;
+    text-decoration: none;
+    display: block;
+}
+
+.dkit__menu-btn:hover {
+    background-color: #f7f7f7ed;
+}
+
+.dkit__menu-btn > span {
+    color: #7f7f7f;font-weight: 300;
+}
+
+.dkit__menu-btn > span:last-child {
+    float: right;
+} 
+
+.dkit__disable-hover{
+    text-align: right;
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    right: 0;
+}
+
+.dkit__code-overlay{
+    z-index: 99;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #9393ff31;
+    opacity: 0.8;
+    border: dashed 2px red;
+}
