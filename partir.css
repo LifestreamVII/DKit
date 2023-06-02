@@ -1,45 +1,48 @@
-/* ================================= */
-/* ============ CSS Partir ============ */
-/* ================================= */
+/* =============================================== */
+/* ============ Stellar Dark Blue CSS ============ */
+/* ============== V.0.0.2 Jun 2023 =============== */
+/* =============================================== */
 
-    /* Guide nomenclature 
-        __ = séparation catégories ;            exemple: u__color__blue 
-                                                                -> u : catégorie classes utilitaires
-                                                                -> color : catégorie couleurs
-                                                                -> blue : valeur blue dans la catégorie couleurs
-        - = séparation groupe de mots ;       exemple: le-jour-et-la-nuit 
-        -- = séparation attribut/interrupteur  exemple: bouton__favoris--actif
-                                                                bouton__favoris--inactif
-                                                                bouton__favoris--petit
-                                                                bouton__favoris--moyen
-                                                                bouton__favoris--grand
+    /* Naming Scheme 
+    __ = Categories -- example: u__color__blue 
+                    -> u : Utility Classes
+                    -> color : Utility => Color Classes
+                    -> blue : Utility => Color Classes => Blue Value
+
+
+    __ = Flags & Variations -- example: button__special--normal
+                                        button__special--small 
+                                        button__special--large
+                                        button__special--off
     */
 
-    /* Guide variables 
-        Déclarer =      --mavariable: valeur;
-        Utilisation =    body { margin: var(--mavariable); }
-    */
 
-    /* ============================ */
-    /*      Déclaration des variables        */
-    /* ============================ */
+/* ========================== */
+/*      Global Variables      */
+/* ========================== */
 
     :root{
-        --noir: #3B3B3B;
-        --mimosa: #FEC40A;
-        --background: #FAFAFA;
-        --etiquette: #F2F2F2;
-        --groseille: #F04848;
-        --naples: #FFFAEB;
-        --gris: #F0F1F2;
-        --glacier: #EEF2F7;
-        --accents: #666666;
+        --c-black: #121212;
+        --c-stellar: #3077DC;
+        --c-white: #FFF;
+        --c-gray: #EEE;
+        --c-red: #F04848;
+        --c-dgray: #666666;
 
-        --ombre-blocguide: 0px 4px 9px 1px rgb(0 0 0 / 9%);
-        --ombre-div: 0px 4px 15px rgba(0, 0, 0, 0.05);
-        --ombre-btn: 0px 4px 6px rgb(0 0 0 / 5%);
+        --g-bg: radial-gradient(29.66% 52.65% at 33.95% 50%, #3077dc1d 0.01%, #01020508 99.99%, #00000007 100%);
+        --g-blue: linear-gradient(180deg, #3077DC 0%, #3A88F8 51.56%, #3077DC 100%);
+        --g-blue-alt: linear-gradient(180deg, #3077DC 21.03%, #394A59 97.4%);
+        --g-blue-transparent: linear-gradient(180deg, #3077DC 21.03%, #394A59 97.4%);
+        --g-blue-stroke: linear-gradient(92.07deg, #00000000 1.43%, #156DB3 98.41%);
+        --g-blue-input: linear-gradient(180deg, #00000000 0%, #015bac00 37.54%, #0068c6b8 100%);
+        --g-red: linear-gradient(180deg, #00000000 0%, #015bac00 37.54%, #0068c6b8 100%);
 
-        --b-radius: 8px;
+        --sh-default: 0px 4px 9px 1px rgb(0 0 0 / 9%);
+        --sh-div: 0px 4px 15px rgb(0 0 0 / 5%);
+        --sh-button: 0px 4px 6px rgb(0 0 0 / 5%);
+
+        --bor-radius: 8px;
+        --bor-radius-button: 26px;
     }
 
     /* ========================================= */
