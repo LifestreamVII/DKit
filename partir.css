@@ -45,143 +45,141 @@
         --bor-radius-button: 26px;
     }
 
-    /* ========================================= */
-    /*      Règles utilitaires (marges/padd/fonts/...)
-                -- Tailles de polices
-                -- Visibilité
-                -- Alignements
-                -- Radius
-                -- Couleurs/Backgrounds
-                -- Ombres
-                -- Colonnes (Row / col-x)
-                -- Pictos
-                -- Marges et Padding
-    /* ========================================  */
-
+/* ====================== */
+/*      Default Rules     */
+/* ====================== */
     *{
-        /* Propriété qui fait en sorte que le padding 
-            ne change pas la width/height déclarée  */
         box-sizing: border-box;
     }
 
     body{
-        font-family: "Poppins", sans-serif;
+        font-family: "CentraNo1", sans-serif;
     }
 
     b{
         font-weight: 600;
     }
-    
+
     p{
         margin: 0;
     }
+
+
+/* ======================= */
+/*      Utility Rules      */
+/* =======================
+-- Font Size
+-- Margin / Padding
+-- Align
+-- Radius
+-- Colors and Background
+-- Shadows
+-- Columns (Row / col-x)
+-- Icons
+/* ======================= */
 
     .u__bold{
         font-weight: 600;
     }
 
-    .u__font__small{
-        font-size: 11.5px;
-    }
-    
-    .u__font__normal{
+    .u__fs__small{
         font-size: 14px;
     }
     
-    .u__font__medium{
-        font-size: 15px;
+    .u__fs__normal{
+        font-size: 16px;
     }
     
-    .u__font__large{
+    .u__fs__medium, .u__fs__h4{
         font-size: 19px;
     }
     
-    .u__font__extreme{
-        font-size: 50px;
+    .u__fs__large, .u__fs__h2{
+        font-size: 27px;
+    }
+    
+    .u__fs__extreme, .u__fs__captionxl{
+        font-size: 55px;
     }
 
-    .u__visible--block{
+    .u__fs__h1{
+        font-size: 40px;
+    }
+
+    .u__fs__h3{
+        font-size: 23px;
+    }
+
+    .u__disp--block{
         display: block!important;
     }
     
-    .u__visible--fixed{
-        display: fixed!important;
+    .u__disp--flex{
+        display: flex!important;
+    }
+
+    .u__disp--in{
+        display: inline!important;
     }
     
-    .u__hidden{
+    .u__disp--hidden{
         display: none!important;
     }
 
-    .u__align-left {
+    .u__align--left {
         text-align: left;
         margin-right: auto;
     }
 
-    .u__align-center{
+    .u__align--right {
+        text-align: right;
+        margin-left: auto;
+    }
+
+    .u__align--center{
         margin-left: auto;
         margin-right: auto;
         text-align: center;
     }
 
-    .u__no-margin{
-        margin: 0;
-    }
-    
-    .u__vertical-center--abs{
+    .u__align--vcenter{
         position: absolute!important;
-        z-index: 8;
         top: 50%!important;
         transform: translateY(-50%)!important;
     }
     
-    .u__vertical-center--rel{
+    .u__align--hcenter{
         position: relative!important;
-        top: 50%!important;
-        transform: translateY(-50%)!important;
+        left: 50%!important;
+        transform: translateX(-50%)!important;
     }
 
-    @supports (mask-image: paint(smooth-corners)) {
-        .u__b-radius {
-          border-radius: 0;
-          mask-image: paint(smooth-corners);
-          --smooth-corners: 6.7;
-        }
-    }
-
-    .u__b-radius{
+    .u__brd--radius{
         border-radius: var(--b-radius);
     }
 
-    .u__color__noir{
-        color: var(--noir);
+    .u__c--black{
+        color: var(--c-black);
     }
 
-    .u__color__mimosa{
-        color: var(--mimosa);
+    .u__c--stellar{
+        color: var(--c-stellar);
     }
 
-    .u__color__background{
-        color: var(--background);
+    .u__c--white{
+        color: var(--c-white);
     }
 
-    .u__color__groseille{
-        color: var(--groseille);
+    .u__c--gray{
+        color: var(--c-gray);
     }
 
-    .u__color__naples{
-        color: var(--naples);
+    .u__c--red{
+        color: var(--c-red);
     }
 
-    .u__color__gris{
-        color: var(--gris);
-    }
-    
-    .u__color__glacier{
-        color: var(--glacier);
-    }
-
-    .u__color__accents{
-        color: var(--accents);
+    .u__c--dgray{
+        color: var(--c-dgray);
     }
 
     .u__background__noir{
@@ -338,6 +336,10 @@
         background-color: #f04848;
         mask-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE3LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDMwMi40ODkgMzAyLjQ4OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAyLjQ4OSAzMDIuNDg5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBkPSJNMzAyLjM1MSw5OC4wMTJjLTEuMTE2LTIwLjg0Ni05Ljk0Mi00MC40MjItMjQuODU1LTU1LjEyMmMtMTUuMTAzLTE0Ljg4Ny0zNC44MTEtMjMuMDg2LTU1LjQ5MS0yMy4wODYNCgljLTMwLjc3NiwwLTUzLjA4MiwyNC4zMzQtNjUuMDY1LDM3LjQwOGMtMS44NSwyLjAxOS00LjAxOCw0LjM4NC01LjUyNyw1LjgyN2MtMS4yMDgtMS4yNS0yLjg0NS0zLjExNC00LjM1MS00LjgyOA0KCWMtMTAuOTQ0LTEyLjQ2Ni0zMy43Mi0zOC40MDYtNjYuNTcxLTM4LjQwNmMtMjAuNjgsMC00MC4zODcsOC4xOTktNTUuNDksMjMuMDg2QzEwLjA4Nyw1Ny41OSwxLjI1OSw3Ny4xNjUsMC4xNDMsOTguMDEyDQoJYy0xLjExMSwyMC44MTIsNC4yMTIsMzguOTIxLDE3LjI2LDU4LjcyYzEwLjMyNCwxNS42NjksMzcuNTQ1LDQ2LjI2Niw2Ni4xOTUsNzQuNDA4YzE0Ljc1NywxNC40OTUsMjguMzM5LDI2Ljc3OSwzOS4yNzcsMzUuNTI0DQoJYzE3Ljc2MiwxNC4yLDI0LjU2NSwxNi4wMjEsMjguNTA2LDE2LjAyMWMzLjY5NSwwLDEwLjY4My0xLjY1NywyOC42MTUtMTUuOTgxYzEwLjkxMy04LjcxNywyNC40NDgtMjAuOTgyLDM5LjE0My0zNS40NjgNCgljMjguMzkzLTI3Ljk5LDU1LjUxNS01OC42MjgsNjUuOTU2LTc0LjUwN0MyOTMuODc3LDE0My4zNzIsMzAzLjc3NCwxMjQuNjI5LDMwMi4zNTEsOTguMDEyeiIvPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=");
         -webkit-mask-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE3LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDMwMi40ODkgMzAyLjQ4OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMzAyLjQ4OSAzMDIuNDg5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBkPSJNMzAyLjM1MSw5OC4wMTJjLTEuMTE2LTIwLjg0Ni05Ljk0Mi00MC40MjItMjQuODU1LTU1LjEyMmMtMTUuMTAzLTE0Ljg4Ny0zNC44MTEtMjMuMDg2LTU1LjQ5MS0yMy4wODYNCgljLTMwLjc3NiwwLTUzLjA4MiwyNC4zMzQtNjUuMDY1LDM3LjQwOGMtMS44NSwyLjAxOS00LjAxOCw0LjM4NC01LjUyNyw1LjgyN2MtMS4yMDgtMS4yNS0yLjg0NS0zLjExNC00LjM1MS00LjgyOA0KCWMtMTAuOTQ0LTEyLjQ2Ni0zMy43Mi0zOC40MDYtNjYuNTcxLTM4LjQwNmMtMjAuNjgsMC00MC4zODcsOC4xOTktNTUuNDksMjMuMDg2QzEwLjA4Nyw1Ny41OSwxLjI1OSw3Ny4xNjUsMC4xNDMsOTguMDEyDQoJYy0xLjExMSwyMC44MTIsNC4yMTIsMzguOTIxLDE3LjI2LDU4LjcyYzEwLjMyNCwxNS42NjksMzcuNTQ1LDQ2LjI2Niw2Ni4xOTUsNzQuNDA4YzE0Ljc1NywxNC40OTUsMjguMzM5LDI2Ljc3OSwzOS4yNzcsMzUuNTI0DQoJYzE3Ljc2MiwxNC4yLDI0LjU2NSwxNi4wMjEsMjguNTA2LDE2LjAyMWMzLjY5NSwwLDEwLjY4My0xLjY1NywyOC42MTUtMTUuOTgxYzEwLjkxMy04LjcxNywyNC40NDgtMjAuOTgyLDM5LjE0My0zNS40NjgNCgljMjguMzkzLTI3Ljk5LDU1LjUxNS01OC42MjgsNjUuOTU2LTc0LjUwN0MyOTMuODc3LDE0My4zNzIsMzAzLjc3NCwxMjQuNjI5LDMwMi4zNTEsOTguMDEyeiIvPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=");
+    }
+
+    .u__mg--none{
+        margin: 0;
     }
 
     .mt-xl {
