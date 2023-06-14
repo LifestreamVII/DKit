@@ -316,3 +316,215 @@
     .mg-none{
         margin: 0;
     }
+
+/* ======================== */
+/*      Padding Rules      */
+/* ====================== */
+    .p-none {
+    padding: 0 !important;
+    }
+    .p-xs {
+    padding: 5px !important;
+    }
+    .p-sm {
+    padding: 10px !important;
+    }
+    .p-md {
+    padding: 15px !important;
+    }
+    .p-lg {
+    padding: 20px !important;
+    }
+    .p-xl {
+    padding: 25px !important;
+    }
+    .p-xlg {
+    padding: 30px !important;
+    }
+    .pt-none {
+    padding-top: 0 !important;
+    }
+    .pt-xs {
+    padding-top: 5px !important;
+    }
+    .pt-sm {
+    padding-top: 10px !important;
+    }
+    .pt-md {
+    padding-top: 15px !important;
+    }
+    .pt-lg {
+    padding-top: 20px !important;
+    }
+    .pt-xl {
+    padding-top: 25px !important;
+    }
+    .pt-xlg {
+    padding-top: 30px !important;
+    }
+    .pb-none {
+    padding-bottom: 0 !important;
+    }
+    .pb-xs {
+    padding-bottom: 5px !important;
+    }
+    .pb-sm {
+    padding-bottom: 10px !important;
+    }
+    .pb-md {
+    padding-bottom: 15px !important;
+    }
+    .pb-lg {
+    padding-bottom: 20px !important;
+    }
+    .pb-xl {
+    padding-bottom: 25px !important;
+    }
+    .pb-xlg {
+    padding-bottom: 30px !important;
+    }
+    .pl-none {
+    padding-left: 0 !important;
+    }
+    .pl-xs {
+    padding-left: 5px !important;
+    }
+    .pl-sm {
+    padding-left: 10px !important;
+    }
+    .pl-md {
+    padding-left: 15px !important;
+    }
+    .pl-lg {
+    padding-left: 20px !important;
+    }
+    .pl-xl {
+    padding-left: 25px !important;
+    }
+    .pl-xlg {
+    padding-left: 30px !important;
+    }
+    .pr-none {
+    padding-right: 0 !important;
+    }
+    .pr-xs {
+    padding-right: 5px !important;
+    }
+    .pr-sm {
+    padding-right: 10px !important;
+    }
+    .pr-md {
+    padding-right: 15px !important;
+    }
+    .pr-lg {
+    padding-right: 20px !important;
+    }
+    .pr-xl {
+    padding-right: 25px !important;
+    }
+    .pr-xlg {
+    padding-right: 30px !important;
+    }
+
+/* ======================== */
+/*      Base Elements      */
+/* ====================== */
+
+    body{
+        color: white;
+    }
+
+    h1.captionxl, span.captionxl, p.captionxl{
+        font-family: 'Kross Neue Grotesk';
+        font-style: italic;
+        font-weight: 900;
+        font-size: 55px;
+        line-height: 66px;
+        text-align: center;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+    }
+
+    h1, h2, h3, h4, h5,
+    .h1, .h2, .h3, .h4, .h5{
+        font-family: 'Kross Neue Grotesk';
+        text-align: center;
+    }
+
+    h1, .h1{
+        font-style: normal;
+        font-weight: 300;
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    h2{
+        font-style: italic;
+        font-weight: 700;
+        font-size: 27px;
+        line-height: 32px;
+    }
+
+    h3{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 23px;
+        line-height: 28px;
+    }
+
+    h4{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 23px;
+    }
+
+    h5{
+        font-style: normal;
+        font-weight: 900;
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    p, .paragraph{
+        font-family: 'Centra No1';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+    }
+
+    p.small{
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+    }
+
+    div.heading{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px 11px;
+        gap: 11px;
+        
+        position: absolute;
+        width: 1140px;
+        height: 71px;
+        left: 150px;
+        top: 339px;
+    }
+
+    span{
+
+    }
+
+    a{
+        font-family: 'Kross Neue Grotesk';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+    }
