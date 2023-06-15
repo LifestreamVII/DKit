@@ -29,7 +29,8 @@
         --c-red: #F04848;
         --c-dgray: #666666;
 
-        --g-bg: radial-gradient(29.66% 52.65% at 33.95% 50%, #3077dc1d 0.01%, #01020508 99.99%, #00000007 100%);
+        /* --g-bg: radial-gradient(29.66% 52.65% at 33.95% 50%, #3077dc1d 0.01%, #01020508 99.99%, #00000007 100%); */
+        --g-bg: radial-gradient(66.48% 69.94% at 29.02% 40.68%, #001220 0%, #030303 100%);
         --g-blue: linear-gradient(180deg, #3077DC 0%, #3A88F8 51.56%, #3077DC 100%);
         --g-blue-alt: linear-gradient(180deg, #3077DC 21.03%, #394A59 97.4%);
         --g-blue-transparent: linear-gradient(180deg, #3077DC 21.03%, #394A59 97.4%);
@@ -286,6 +287,9 @@
     .mb-s {
         margin-bottom:20px;
     }
+    .mb-es {
+        margin-bottom:4px;
+    }
     
     .ml-s {
         margin-left:20px;
@@ -487,7 +491,7 @@
     }
 
     p, .paragraph, span{
-        font-family: 'Centra No1';
+        font-family: 'CentraNo1';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
@@ -502,20 +506,26 @@
 
     div.heading{
         padding: 11px;
-        position: absolute;
+        border-radius: var(--b-radius);
         width: 100%;
-        height: 70px;
+        min-height: 70px;
+        height: 85%;
+        text-align: left;
         background: var(--g-blue-input);
         border-bottom: solid 2px var(--c-stellar);
     }
+    div.heading > *{
+        text-align: left;
+    }
 
     a{
-        font-family: 'Centra No1';
+        font-family: 'CentraNo1';
         font-style: normal;
         font-weight: 400;
         font-size: 23px;
         text-decoration-line: underline;
         color: var(--c-stellar);
+        cursor: pointer;
     }
 
     a:hover{
