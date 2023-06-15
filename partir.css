@@ -530,3 +530,50 @@
     a:hover{
         color: var(--c-white);
     }
+
+    button, a.btn{
+        background: var(--g-blue);
+        padding: 14px 32px;
+        min-width: 150px;
+        border: none;
+        border-radius: var(--bor-radius-button);
+        width: fit-content;
+        cursor: pointer;
+    }
+    a.btn{
+        display: block;
+        text-decoration: none;
+    }
+    button, a.btn, a.btn span{
+        font-family: Kross Neue Grotesk;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 19px;
+        text-transform: uppercase;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: white;
+    }
+    button.small, a.btn.small{
+        min-width: none;
+    }
+    button.alt, a.btn.alt{
+        border: solid 2px var(--c-stellar);
+        background: transparent;
+        transition: border 0.3s ease-out;
+    }
+    button.alt:hover, a.btn.alt:hover{
+        border: solid 2px var(--c-white);
+    }
+    div.buttons{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    div.buttons > .btn,
+    div.buttons > button
+    {
+        /*  */
+    }
