@@ -1,0 +1,40 @@
+.navbar{
+    position: fixed;
+    z-index: var(--z-index-navbar);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 8px 0;
+    height: 80px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--g-nav);
+}
+
+.navbar a {
+    font-family: Kross Neue Grotesk;
+    font-size: 16px;
+    font-weight: 900;
+    margin: 0 20px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--c-white);
+    transition: color 0.07s ease-out;
+}
+
+.navbar a:hover{
+    color: var(--c-stellar);
+}
+
+.navbar a.navbar__logo--sm{
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-image: var(--img-logo);
+    background-size: 100%;
+    background-position: center;
+}
