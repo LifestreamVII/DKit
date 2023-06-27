@@ -5,7 +5,7 @@
     left: 0;
     width: 100vw;
     padding: 8px 0;
-    height: 80px;
+    height: var(--size-navbar-h);
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
@@ -15,7 +15,7 @@
 
 .navbar a {
     font-family: Kross Neue Grotesk;
-    font-size: 16px;
+    font-size: 0.85em;
     font-weight: 900;
     margin: 0 20px;
     letter-spacing: -0.02em;

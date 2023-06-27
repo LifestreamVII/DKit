@@ -41,6 +41,59 @@
             let page = $(this).attr("id");
             load(page);
         })
+
+        $('select[data-menu]').each(function() {
+
+        let select = $(this),
+            type = select.data('menu'),
+            menu = $('<div />').addClass('select btn alt ' + type),
+            button = $("<div class='btn-cont' />"),
+            buttonDiv = $("<div class='' />"),
+            current = $('<span />').text(select.find('option:selected').text()).appendTo(buttonDiv),
+            arrow = $('<em />').prependTo(button);
+
+        button.css({
+            '--h': select.outerHeight(),
+            '--w': select.outerWidth()
+        });
+
+        select.wrap(menu);
+
+        button.append(buttonDiv).insertAfter(select);
+
+        });
+
+        $(document).on('click', '.select.btn', function(e) {
+
+        let menu = $(this),
+            select = menu.children('select'),
+            options = select.find('option'),
+            active = select.find('option:selected'),
+            button = menu.children('.btn-cont'),
+            buttonDiv = button.children('div'),
+            current = buttonDiv.children('span');
+
+        if(!menu.hasClass('change')) {
+
+            let nextOption = options.eq(active.index() == options.length - 1 ? 0 : active.index() + 1),
+                next = $('<span />').addClass('next').text(nextOption.text()).appendTo(buttonDiv);
+
+            options.attr('selected', false);
+            nextOption.attr('selected', true);
+
+            menu.addClass('change');
+
+            setTimeout(() => {
+
+                next.removeClass('next');
+                menu.removeClass('change');
+                current.remove();
+
+            }, 650);
+
+        }
+
+        });
     })
 </script>
 <body>
@@ -72,24 +125,30 @@
     </header>
     <div class="home-chungus bg__pic--wide">
         <div class="gradient-overlay">
-        <!--video(loop, autoplay, muted, preload="auto", poster="myposter.png")-->
-        <!-- <source id="mp4" src="backhome.webm" type="video/mp4"> -->
-        <!-- source#webm(src="", type="video/webm")-->
+            <!-- <video loop autoplay muted preload="auto" poster="myposter.png">
+                <source id="mp4" src="backhome.webm" type="video/mp4">
+                <source id="webm" src="" type="video/webm">
+            </video> -->
         </div>
         <div class="img-fulls u__align--right"><img src="stellarg.png" alt="" srcset=""></div>
-        <div class="row" style="height: 93%;">
+        <div class="row" style="height: 90%; z-index: 1;">
             <div class="col-md-5 col-12 pl-md ml-l u__align--left pb-xl" style="align-self: flex-end;">
-                <h1 class="mt-none mb-none u__align--left captionxl">Music</h1>
-                <h1 class="mt-none mb-es u__align--left captionxl">To the next level.</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro labore nulla officiis repellat, ducimus expedita enim itaque asperiores molestias iste veniam reiciendis facere quas. Sapiente cupiditate aperiam voluptatibus reiciendis possimus?</p>
-                <div class="mt-s buttons u__flex--left">
-                    <a class="btn mr-s">Get started</a>
-                    <a class="btn alt">Learn more</a>
+                <h1 class="mt-none mb-none u__align--left captionxl">Design Kit</h1>
+                <h1 class="mt-none mb-es u__align--left captionxl">Web Ver.</h1>
+                <p>pride month is over. All gay people instantly begin to spontaneously combust, trans people begin to morph into various citrus fruits and are sold as novelty items from a different time. Bisexual people are instantly split in half by the invisible blade of corporate disinterest and the non-bianries are legally banned from using the number 0 in any scenario.</p>
+                <div class="buttons u__flex--left">
+                    <select data-menu="vertical">
+                        <option selected>DIV Blocks</option>
+                        <option>Links</option>
+                        <option>Buttons</option>
+                        <option>Colors</option>
+                    </select>
+                    <a href="" class="btn" style="min-width: fit-content; padding: 1em 1em;">➔</a>
                 </div>
             </div>
             <div class="col-md-6 col-12 align-right" style="align-self: center;">
                 <div class="mt-m">
-                <h2>Hello</h2>
+                
                 </div>
             </div>
         </div>
@@ -123,7 +182,7 @@
         </div>
         </div>
     </div>
-    <div class="dkit__cont mt-xl">
+    <div class="dkit__cont mt-xl" style="display: none;">
         <div id="dkit__section" class="dkit__section">
             
         </div>

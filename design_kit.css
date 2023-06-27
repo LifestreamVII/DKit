@@ -15,10 +15,6 @@ b{
     font-weight: 600;
 }
 
-p{
-    margin: 0;
-}
-
 .dkit__cont__column{
     display: flex;
     flex-flow: column nowrap;
