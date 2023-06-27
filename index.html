@@ -42,6 +42,12 @@
             load(page);
         })
 
+        $("#choicekit").click(function(){
+            event.preventDefault();
+            let page = $('select[data-menu]').val();
+            load(page);
+        })
+
         $('select[data-menu]').each(function() {
 
         let select = $(this),
@@ -138,12 +144,12 @@
                 <p>pride month is over. All gay people instantly begin to spontaneously combust, trans people begin to morph into various citrus fruits and are sold as novelty items from a different time. Bisexual people are instantly split in half by the invisible blade of corporate disinterest and the non-bianries are legally banned from using the number 0 in any scenario.</p>
                 <div class="buttons u__flex--left">
                     <select data-menu="vertical">
-                        <option selected>DIV Blocks</option>
-                        <option>Links</option>
-                        <option>Buttons</option>
-                        <option>Colors</option>
+                        <option selected value="blocs-div">DIV Blocks</option>
+                        <option value="liens-et-boutons">Links</option>
+                        <option value="typo">Typo</option>
+                        <option value="couleurs">Colors</option>
                     </select>
-                    <a href="" class="btn" style="min-width: fit-content; padding: 1em 1em;">➔</a>
+                    <a href="" id="choicekit" class="btn" style="min-width: fit-content; padding: 1em 1em;">➔</a>
                 </div>
             </div>
             <div class="col-md-6 col-12 align-right" style="align-self: center;">
@@ -182,40 +188,9 @@
         </div>
         </div>
     </div>
-    <div class="dkit__cont mt-xl" style="display: none;">
+    <div class="dkit__cont mt-xl">
         <div id="dkit__section" class="dkit__section">
             
-        </div>
-        <div class="dkit__heading">
-            <h1 class="captionxl">Design Kit</h1>
-        </div>
-        <div class="row">
-        <div class="dkit__main buttons col-12 mb-xl">
-            <a href="#mise-en-page" id="mise-en-page" class="btn alt">
-                <span>Layout</span>
-            </a>
-            <a href="#blocs-div" id="blocs-div" class="btn alt">
-                <span>Blocks</span>
-            </a>
-            <a href="#blocs-guide-perso" id="blocs-guide-perso" class="btn alt">
-                <span>Placeholder</span>
-            </a>
-            <a class="btn alt">
-                <span>Menus ETC.</span>
-            </a>
-            <a href="#couleurs" id="couleurs" class="btn alt">
-                <span>Colors</span>
-            </a>
-            <a href="#typo" id="typo" class="btn alt">
-                <span>Type</span>
-            </a>
-            <a href="#marges" id="marges" class="btn alt">
-                <span>Margin</span>
-            </a>
-            <a href="#liens-et-boutons" id="liens-et-boutons" class="btn alt">
-                <span>Links Buttons</span>
-            </a>
-        </div>
         </div>
     </div>
 </body>
