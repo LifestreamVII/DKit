@@ -141,8 +141,8 @@ span.dkit__typo__title {
     border-radius: 1em;
     position: relative;
     padding: 6px 32px;
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw; */
+    /* height: 100vh; */
 }
 
 .dkit__h1{
@@ -199,4 +199,8 @@ span.dkit__typo__title {
     background-color: #9393ff31;
     opacity: 0.8;
     border: dashed 2px red;
+}
+
+.dkit__typo__item{
+    margin: 6% 0;
 }
